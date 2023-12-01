@@ -1,11 +1,29 @@
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
-const AppCardHeader = () => {
+const AppCardHeader = ({
+  name,
+  icon,
+  payPerInstall,
+}: {
+  name: string;
+  icon: string;
+  payPerInstall: string;
+}) => {
   return (
-    <div>
-      
+    <div className="flex gap-x-3">
+      <figure className="w-[50px] h-auto rounded-lg overflow-hidden">
+        <img src={icon} alt={name} className="w-full" />
+      </figure>
+      <div>
+        <p className="font-bold">{name}</p>
+        <p className="text-green-400">
+          <span className='font-semibold'>{payPerInstall}</span>
+          per install
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AppCardHeader
+export default AppCardHeader;
