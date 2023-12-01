@@ -1,6 +1,6 @@
 'use client';
 
-import Media from './Media';
+import Media, { MediaProps } from './Media';
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,9 +13,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
 
-const Medias = ({ medias }: { medias: object[] }) => {
+const Medias = ({ medias }: { medias: MediaProps[] }) => {
   return (
-    <div>
+    <div className="mt-7">
       <Swiper
         slidesPerView={2.5}
         spaceBetween={30}
@@ -23,7 +23,7 @@ const Medias = ({ medias }: { medias: object[] }) => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {medias.map((media: object, index) => (
+        {medias.map((media: MediaProps, index) => (
           <SwiperSlide>
             <Media key={index} media={media} />
           </SwiperSlide>

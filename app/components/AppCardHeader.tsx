@@ -16,9 +16,9 @@ const AppCardHeader = ({
         <img src={icon} alt={name} className="w-full" />
       </figure>
       <div>
-        <p className="font-bold">{name}</p>
-        <p className="text-green-400">
-          <span className='font-semibold'>{payPerInstall}</span>
+        <p className="font-extrabold">{name}</p>
+        <p className="text-green-600">
+          <span className='font-semibold'>{payPerInstall} </span>
           per install
         </p>
       </div>

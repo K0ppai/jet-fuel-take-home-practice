@@ -23,6 +23,7 @@ const Buttons = ({ download_url, link }: { download_url: string; link: string })
       <a
         href={download_url}
         download="video.mp4"
+        target=''
         className="w-1/2 flex justify-center text-gray-400 border border-gray-400 p-3 rounded-tr-md rounded-br-md"
       >
         <GrLinkBottom />
